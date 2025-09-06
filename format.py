@@ -8,6 +8,12 @@ CPP_EXTENSIONS = {
   '.ipp', '.tpp', '.inl'
 }
 
+def print_selected_files(cpp_files: set[str]):
+  cwd = os.getcwd()
+  print('Selected files:')
+  for file in cpp_files:
+    print(os.path.relpath(file, cwd))
+
 def print_to_stderr(*args, **kwargs):
   print(*args, file=sys.stderr, **kwargs)
 
@@ -68,6 +74,8 @@ def main(args):
 
   cpp_files = get_cpp_file_names(search_paths, ignore_paths)
 
+  if (not args.silent):
+    print_selected_files(cpp_files)
   subprocess.run(['clang-format', f'-style=file:{find_format_file()}', '-i', *cpp_files], check=True)
 
 if __name__ == '__main__':
@@ -78,6 +86,7 @@ if __name__ == '__main__':
     )
     parser.add_argument('-i', '--ignore')
     parser.add_argument('-p', '--path')
+    parser.add_argument('-s', '--silent', action='store_true')
     main(parser.parse_args())
   except Exception as exception:
     print_to_stderr(str(exception))
