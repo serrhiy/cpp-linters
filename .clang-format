@@ -118,6 +118,6 @@ SpaceInEmptyBlock: true
 SpacesBeforeTrailingComments: 2
 SpacesInAngles: Never
 SpacesInParens: Never
-SpacesInSquareBrackets: true
+SpacesInSquareBrackets: false
 Standard: Latest
 UseTab: Never
