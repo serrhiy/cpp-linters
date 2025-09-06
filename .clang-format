@@ -57,12 +57,12 @@ BreakFunctionDefinitionParameters: false
 BreakInheritanceList: AfterColon
 BreakStringLiterals: true
 BreakTemplateDeclarations: Yes
-ColumnLimit: 80
+ColumnLimit: 100
 ConstructorInitializerIndentWidth: 2
 ContinuationIndentWidth: 2
 Cpp11BracedListStyle: false
 EmptyLineAfterAccessModifier: Never
-EmptyLineBeforeAccessModifier: Never
+EmptyLineBeforeAccessModifier: Always
 FixNamespaceComments: false
 IndentCaseBlocks: false
 IndentCaseLabels: true
