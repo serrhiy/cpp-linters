@@ -121,3 +121,4 @@ SpacesInParens: Never
 SpacesInSquareBrackets: false
 Standard: Latest
 UseTab: Never
+SortIncludes: false
