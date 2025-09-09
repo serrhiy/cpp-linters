@@ -121,3 +121,4 @@ SpacesInSquareBrackets: false
 Standard: Latest
 UseTab: Never
 SortIncludes: false
+AllowShortIfStatementsOnASingleLine: AllIfsAndElse
