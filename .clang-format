@@ -1,15 +1,14 @@
 ---
 Language: Cpp
-AccessModifierOffset: -2
-AlignAfterOpenBracket: BlockIndent
+AccessModifierOffset: 0
+AlignAfterOpenBracket: Align
 AlignArrayOfStructures: Right
-AlignEscapedNewlines: LeftWithLastLine
 AlignOperands: Align
 AlignTrailingComments:
   Kind: Always
   OverEmptyLines: 1
-AllowAllArgumentsOnNextLine: false
-AllowAllParametersOfDeclarationOnNextLine: false
+AllowAllArgumentsOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: true
 AllowBreakBeforeNoexceptSpecifier: Never
 AllowShortBlocksOnASingleLine: Always
 AllowShortCaseExpressionOnASingleLine: true
@@ -17,24 +16,28 @@ AllowShortCaseLabelsOnASingleLine: true
 AllowShortCompoundRequirementOnASingleLine: true
 AllowShortEnumsOnASingleLine: true
 AllowShortFunctionsOnASingleLine: All
+AllowShortIfStatementsOnASingleLine: AllIfsAndElse
 AllowShortLambdasOnASingleLine: All
 AllowShortLoopsOnASingleLine: true
 AllowShortNamespacesOnASingleLine: true
+AlwaysBreakBeforeMultilineStrings: false
 BinPackArguments: false
 BinPackLongBracedList: true
+BinPackParameters: OnePerLine
 BitFieldColonSpacing: After
+BreakBeforeBraces: Custom
 BraceWrapping:
   AfterCaseLabel: false
   AfterClass: false
-  AfterControlStatement: MultiLine
+  AfterControlStatement: Never
   AfterEnum: false
   AfterFunction: false
   AfterNamespace: false
   AfterStruct: false
   AfterUnion: false
   AfterExternBlock: false
-  BeforeCatch: false
-  BeforeElse: false
+  BeforeCatch: true
+  BeforeElse: true
   BeforeLambdaBody: false
   BeforeWhile: false
   IndentBraces: false
@@ -43,32 +46,35 @@ BraceWrapping:
   SplitEmptyNamespace: false
 BracedInitializerIndentWidth: 2
 BreakAdjacentStringLiterals: false
-BreakAfterReturnType: Automatic
+BreakAfterAttributes: Never
+BreakAfterReturnType: ExceptShortType
 BreakBeforeBinaryOperators: None
-BreakBeforeBraces: Custom
-BreakBeforeConceptDeclarations: Never
+BreakBeforeConceptDeclarations: Allowed
 BreakBeforeInlineASMColon: OnlyMultiline
 BreakBeforeTemplateCloser: true
-BreakBeforeTernaryOperators: false
+BreakBeforeTernaryOperators: true
 BreakBinaryOperations: RespectPrecedence
-BreakConstructorInitializers: BeforeColon
+BreakConstructorInitializers: AfterColon
 BreakFunctionDefinitionParameters: false
 BreakInheritanceList: AfterColon
 BreakStringLiterals: true
 BreakTemplateDeclarations: Yes
 ColumnLimit: 100
-ConstructorInitializerIndentWidth: 2
+CompactNamespaces: false
+ConstructorInitializerIndentWidth: 0
 ContinuationIndentWidth: 2
 Cpp11BracedListStyle: false
 EmptyLineAfterAccessModifier: Never
 EmptyLineBeforeAccessModifier: Always
+EnumTrailingComma: Insert
 FixNamespaceComments: false
+IndentAccessModifiers: false
 IndentCaseBlocks: false
 IndentCaseLabels: true
 IndentExportBlock: true
 IndentExternBlock: Indent
 IndentGotoLabels: true
-IndentPPDirectives: None
+IndentPPDirectives: BeforeHash
 IndentRequiresClause: true
 IndentWidth: 2
 IndentWrappedFunctionNames: true
@@ -78,10 +84,17 @@ KeepEmptyLines:
   AtEndOfFile: true
   AtStartOfBlock: false
   AtStartOfFile: false
-LambdaBodyIndentation: Signature
+KeepFormFeed: false
+LambdaBodyIndentation: OuterScope
 LineEnding: LF
 MaxEmptyLinesToKeep: 1
 NamespaceIndentation: All
+NumericLiteralCase:
+  ExponentLetter: Lower
+  HexDigit: Lower
+  Prefix: Lower
+  Suffix: Lower
+PPIndentWidth: -1
 PackConstructorInitializers: CurrentLine
 PointerAlignment: Left
 QualifierAlignment: Left
@@ -89,14 +102,19 @@ ReferenceAlignment: Left
 ReflowComments: Always
 RemoveEmptyLinesInUnwrappedLines: true
 RemoveSemicolon: true
+RequiresClausePosition: OwnLine
+RequiresExpressionIndentation: OuterScope
 SeparateDefinitionBlocks: Always
-ShortNamespaceLines: 0
+SkipMacroDefinitionBody: false
+SortIncludes: false
+SortUsingDeclarations: LexicographicNumeric
 SpaceAfterCStyleCast: false
 SpaceAfterLogicalNot: false
-SpaceAfterTemplateKeyword: true
+SpaceAfterTemplateKeyword: false
+SpaceAroundPointerQualifiers: Default
 SpaceBeforeAssignmentOperators: true
 SpaceBeforeCaseColon: false
-SpaceBeforeCpp11BracedList: false
+SpaceBeforeCpp11BracedList: true
 SpaceBeforeCtorInitializerColon: false
 SpaceBeforeInheritanceColon: false
 SpaceBeforeParens: Custom
@@ -113,12 +131,11 @@ SpaceBeforeParensOptions:
   BeforeNonEmptyParentheses: false
 SpaceBeforeRangeBasedForLoopColon: false
 SpaceBeforeSquareBrackets: false
-SpaceInEmptyBlock: true
+SpaceInEmptyBraces: Never
 SpacesBeforeTrailingComments: 2
 SpacesInAngles: Never
-SpacesInParens: Never
+SpacesInContainerLiterals: false
 SpacesInSquareBrackets: false
 Standard: Latest
+TabWidth: 2
 UseTab: Never
-SortIncludes: false
-AllowShortIfStatementsOnASingleLine: AllIfsAndElse
