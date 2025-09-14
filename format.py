@@ -76,7 +76,9 @@ def main(args):
 
   if (not args.silent):
     print_selected_files(cpp_files)
-  subprocess.run(['clang-format', f'-style=file:{find_format_file()}', '-i', *cpp_files], check=True)
+
+  style = f'file:{find_format_file()}' if args.preset is None else args.preset
+  subprocess.run(['clang-format', f'-style={style}', '-i', *cpp_files], check=True)
 
 if __name__ == '__main__':
   try:
@@ -87,6 +89,7 @@ if __name__ == '__main__':
     parser.add_argument('-i', '--ignore')
     parser.add_argument('-p', '--path')
     parser.add_argument('-s', '--silent', action='store_true')
+    parser.add_argument('--preset')
     main(parser.parse_args())
   except Exception as exception:
     print_to_stderr(str(exception))
